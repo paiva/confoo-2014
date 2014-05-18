@@ -1,3 +1,5 @@
+# Credits: Peter Sutton, The University of Manchester
+
 import math
 
 class Cubic: 
@@ -33,7 +35,9 @@ class Cubic:
 
     return x1, x2, x3
 
-
+"""
+    getAttribute Class Customization
+"""
   def __getattr__(self, name):
     calcName = "_" + name
 
@@ -43,30 +47,56 @@ class Cubic:
   else:
     raise AttributeError
     
-    
+"""
+    f Calculation Method
+"""    
   def _f(self):
     self.f = (3*self.c/self.a - self.b**2/self.a**2)/3
 
+"""
+    g Calculation Method
+"""
   def _g(self):
     self.g = (2*self.b**3/self.a**3 - 9*self.b*self.c/self.a**2 + 27*self.d/self.a)/27
 
+"""
+    h Calculation Method
+"""
   def _h(self):
     self.h = self.g**2/4 + self.f**3/27
 
+"""
+    r Calculation Method
+"""
   def _r(self):
     self.r = -(self.g/2) + self.h**0.5
 
+"""
+    s Calculation Method
+"""
   def _s(self):
     self.s = -abs(self.r)**(1/3) if self.r < 0 else self.r**(1/3)
 
+"""
+    t Calculation Method
+"""
   def _t(self):
     self.t = -(self.g/2) - self.h**0.5
 
+"""
+    u Calculation Method
+"""
   def _u(self):
     self.u = -abs(self.t)**(1/3) if self.t < 0 else self.t**(1/3)
 
+"""
+    i Calculation Method
+"""
   def _i(self):
     self.i = ((self.g**2/4)-self.h)**0.5
 
+"""
+    j Calculation Method
+"""
   def _j(self):
     self.j = self.i**(1/3)

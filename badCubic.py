@@ -1,12 +1,19 @@
 import math
 
 class Cubic:
+
+"""
+    Constructor
+"""
   def __init__(self, a, b, c, d):
     self.a = a
     self.b = b
     self.c = c
     self.d = d
 
+"""
+    getRoots Method
+"""
   def getRoots(self):
     f = (3*self.c/self.a - self.b**2/self.a**2)/3
 
@@ -49,11 +56,14 @@ class Cubic:
 
     return x1, x2, x3
 
-
+"""
+    printRoots Method
+"""
 def printRoots(cubic):
   for index, root in enumerate(cubic.getRoots()):
     print("x{0}: {1}".format(index+1, root))
 
+# Test Cases
 printRoots(Cubic(2,  -4, -22, 24))
 printRoots(Cubic(3, -10,  14, 27))
 printRoots(Cubic(1,   6,  12,  8))

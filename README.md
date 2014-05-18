@@ -1,8 +1,10 @@
-cubic
+Cubic
 =====
 
-This is the source code for my presentation *"Class Customization, Better code"*, 
+This is the source code for my presentation *"Class Customization and Better code"*, 
 presented at Confoo 2014
+
+**Files:** badCubic.py and betterCubic.py
 
 **Slides:** https://speakerdeck.com/paiva/class-customization-and-better-code
 
